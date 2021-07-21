@@ -55,6 +55,7 @@ app.get("/", function (req, res) {
         }
       });
       res.redirect("/");
+      res.sendFile("/home/maaz_ahmad213/java-part1/1.zip");
     } else {
       res.render("list", { listTitle: "Today", newListItems: foundItems });
     }

@@ -44,6 +44,9 @@ const listSchema = {
 
 const List = mongoose.model("List", listSchema);
 
+app.get("/download", function (req, res) {
+  res.download("/home/maaz_ahmad213/java-part1/1.zip");
+});
 app.get("/", function (req, res) {
   Item.find({}, function (err, foundItems) {
     if (foundItems.length === 0) {
@@ -55,7 +58,6 @@ app.get("/", function (req, res) {
         }
       });
       res.redirect("/");
-      res.sendFile("/home/maaz_ahmad213/java-part1/1.zip");
     } else {
       res.render("list", { listTitle: "Today", newListItems: foundItems });
     }

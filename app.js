@@ -14,7 +14,8 @@ app.use(express.static("public"));
 
 mongoose.connect(
   "mongodb+srv://maazahmadd:mysampleproject@cluster0.8izji.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  { useNewUrlParser: true }
+  { useNewUrlParser: true },
+  { useUnifiedTopology: true }
 );
 
 const itemsSchema = {

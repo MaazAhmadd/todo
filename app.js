@@ -44,9 +44,6 @@ const listSchema = {
 
 const List = mongoose.model("List", listSchema);
 
-app.get("/download", function (req, res) {
-  res.download("/home/maaz_ahmad213/java-part1/5_comp.zip");
-});
 app.get("/", function (req, res) {
   Item.find({}, function (err, foundItems) {
     if (foundItems.length === 0) {
@@ -135,6 +132,9 @@ app.post("/delete", function (req, res) {
 
 app.get("/about", function (req, res) {
   res.render("about");
+});
+app.get("/download", function (req, res) {
+  res.download("/data-mount/java-part2/part_2.zip");
 });
 
 let port = 80;

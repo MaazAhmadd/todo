@@ -137,7 +137,7 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-let port = 80;
+let port = 443;
 app.listen(port, function () {
   console.log("Server started on port " + port);
 });
